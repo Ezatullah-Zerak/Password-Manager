@@ -25,26 +25,12 @@ def generate_password():
     list_password += [str(random.choice(numbers)) for _ in range(random_len - 1)]
     list_password += [random.choice(symbols) for _ in range(random_len - 2)]
     
-    # Long way: Loops
-    # for _ in range(0, random_len + 2):
-    #     random_letter = random.choice(letters)
-    #     list_password += random_letter
-        
-    # for _ in range(0, random_len):
-    #     random_number = random.choice(numbers)
-    #     list_password += str(random_number)
-        
-    # for _ in range(0, random_len - 2):
-    #     list_password += random.choice(symbols)
-        
-        
+
     random.shuffle(list_password)
 
     password = "".join(list_password)
     
-    # for item in list_password:
-    #     password += item
-        
+
     password_entry.insert(END, string = password)
 
 
@@ -78,7 +64,7 @@ def save_data():
             with open("data.json", "w") as data_file:
                 json.dump(new_data, data_file, indent = 4)
                 
-        # when there is no data in the file this kind of error will occur:
+
         except json.decoder.JSONDecodeError:
             with open("data.json", "w") as data_file:
                 json.dump(new_data, data_file, indent = 4)
