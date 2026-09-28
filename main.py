@@ -132,7 +132,7 @@ emial_label.grid(column=0, row = 2)
 
 email_entry = Entry(width = 49)
 email_entry.grid(column = 1, row = 2, columnspan = 2)
-email_entry.insert(END, string = "afghanzerak508@gmail.com")
+email_entry.insert(END, string = "example@gmail.com")
 
 
 password_label = Label(text = "Password:")
